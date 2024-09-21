@@ -106,7 +106,14 @@ export default function Component() {
   )
 }
 
-function DealCard({ title, description, coupon, link }) {
+interface DealCardProps {
+  title: string;
+  description: string;
+  coupon: string;
+  link: string;
+}
+
+function DealCard({ title, description, coupon, link }: DealCardProps) {
   return (
     <div style={{ border: '1px solid #ccc', padding: '16px' }}>
       <h3>{title}</h3>
